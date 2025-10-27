@@ -13,11 +13,11 @@ const Splash = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.replace('SignIn'); 
+      navigation.replace('SignIn');
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [navigation]);
 
   return (
     <View style={styles.splashBox}>
@@ -29,12 +29,12 @@ const Splash = () => {
             style={styles.logo}
             resizeMode="contain"
           />
-          
+
         </View>
 
         <View style={styles.nameContainer}>
           <Image
-            source={require('../../assets/images/splash/Frame 1.png')} 
+            source={require('../../assets/images/splash/Frame1.png')}
             style={styles.collezionaImage}
             resizeMode="contain"
           />

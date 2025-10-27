@@ -1,17 +1,13 @@
 
 import React, { useState } from 'react';
-import {
-  View,Text,TextInput,TouchableOpacity,KeyboardAvoidingView,TouchableWithoutFeedback,Keyboard,
-  Platform,Alert,} from 'react-native';
-
-  import { useNavigation } from '@react-navigation/native';
+import { View,Text,TextInput,TouchableOpacity,KeyboardAvoidingView,TouchableWithoutFeedback,Keyboard,
+  Platform,Alert} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
-
 
 
 const forgot = () => {
   const [email, setEmail] = useState('');
- 
   const navigation = useNavigation();
 
   const handleSubmit = () => {
@@ -31,7 +27,7 @@ const forgot = () => {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
 
- 
+
 
           <Text style={styles.title}>Recover your{'\n'}password</Text>
 
@@ -44,7 +40,6 @@ const forgot = () => {
               autoCapitalize="none" />
 
    <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-    
    <Text style={styles.buttonText}>Submit</Text>
    </TouchableOpacity>
 
@@ -52,7 +47,7 @@ const forgot = () => {
 
  <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
           <Text style={styles.footerText}>
-             already have an account ? <Text style={styles.signInText}> sign in</Text> 
+             already have an account ? <Text style={styles.signInText}> sign in</Text>
            </Text>
 
        </TouchableOpacity>

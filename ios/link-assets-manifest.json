@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/ComingSoon-Regular.ttf",
+      "sha1": "d8e83a67f503af9fae566edc26ffc32f242ea8ac"
+    },
+    {
+      "path": "src/assets/fonts/Content-Bold.ttf",
+      "sha1": "8ec036ec035396cb25dc5efc0be0ace938ef4e83"
+    },
+    {
+      "path": "src/assets/fonts/Content-Regular.ttf",
+      "sha1": "08c5188f1aa1342be230de65a20ae5fdd23302d9"
+    }
+  ]
+}

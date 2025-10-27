@@ -1,7 +1,7 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet , Dimensions} from 'react-native';
 import { FONT } from '../../assets/constant/fonts';
 
-const {  height } = Dimensions.get('window');
+const {height } = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
@@ -27,13 +27,14 @@ export default StyleSheet.create({
   },
 
   label: {
-    fontSize: 14,
-    color: '#888',
+    fontSize: 16,
+    color: 'black',
     alignSelf: 'flex-start',
     marginLeft: 30,
     marginBottom: 4,
     // marginRight:10,
     textTransform: 'lowercase',
+    fontWeight:400,
   },
 
   input: {

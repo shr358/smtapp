@@ -3,6 +3,13 @@ export type RootStackParamList = {
   SignIn: undefined;
   Signup: undefined;
   forgot: undefined;
-  home: { email: string }; 
-  
+  //  home: undefined;
+home:{ email: string };
+Catalogdetailscreen: {product : any};
+ ScannerScreen:undefined;
+ Account:undefined;
+ changepassword:undefined;
+ Catalog:undefined;
+ Collection:{ email: string }
+
 };

@@ -8,16 +8,18 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 30,
+    // marginTop:20
   },
 
   title: {
-    fontSize: 40,
+    fontSize: 30,
     color: '#000000',
     textAlign: 'center',
     fontFamily:  FONT.REGULAR,
-    marginBottom: 30,
-    lineHeight: 37,
-    fontWeight:'500'
+    marginBottom: 25,
+    lineHeight: 38,
+    fontWeight:'600',
+    width:'90%'
   },
 
   highlight: {
@@ -27,14 +29,14 @@ export const styles = StyleSheet.create({
 
   inputContainer: {
     width: '100%',
-    marginBottom: 25,
+    marginBottom: 15,
     
   },
 
   label: {
     fontSize: 13,
     color: '#333333',
-    marginBottom: 6,
+    marginBottom: 3,
     textTransform: 'lowercase',
     fontFamily: 'ComingSoon',
     marginLeft:21
@@ -47,7 +49,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 13,
     fontSize: 15,
-    marginBottom: 15,
+    marginBottom: 10,
     color: '#000000',
     fontFamily: 'ComingSoon',
      marginLeft:20,
@@ -56,11 +58,11 @@ export const styles = StyleSheet.create({
 
   button: {
     backgroundColor: '#305C50',
-    width: 310,
+    width: 315,
     paddingVertical: 16,
-    borderRadius: 6,
+    borderRadius: 8,
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 10,
     // marginRight:30,
 // paddingHorizontal:20,
     // marginLeft:30
@@ -75,7 +77,7 @@ export const styles = StyleSheet.create({
   signinRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 40,
+    marginBottom: 20,
   },
 
   signinText: {
@@ -94,7 +96,7 @@ export const styles = StyleSheet.create({
   termsContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 10,
+    marginBottom: 5,
     width: '100%',
   },
 
@@ -106,20 +108,20 @@ export const styles = StyleSheet.create({
 
   termsText: {
     color: '#777777',
-    fontSize: 15,
+    fontSize: 14,
     marginHorizontal: 8,
     fontFamily: 'ComingSoon',
-    marginTop:10
+    marginTop:-2
   },
 
   termsDesc: {
     color: '#777777',
-    fontSize: 14,
+    fontSize: 12,
     textAlign: 'center',
-    lineHeight: 18,
+    lineHeight: 16,
     fontFamily: 'ComingSoon',
     paddingHorizontal: 10,
-    marginTop:10
+    marginTop:5
   },
 
   passwordContainer: {

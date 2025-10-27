@@ -1,12 +1,12 @@
 
 import { StyleSheet, Dimensions } from 'react-native';
-import { FONT } from '../../assets/constant/fonts';
+import { FONT } from '../../assets/constant/fonts/index';
 
 const { width, height } = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     backgroundColor: '#FFFFFF',
     alignItems: 'center',
     paddingHorizontal: width * 0.05,
@@ -38,7 +38,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: '#000',
     paddingVertical: height * 0.015,
-    width: width * 0.80,
+    width: width * 0.79,
     borderRadius: 8,
     marginBottom: height * 0.05,
     alignSelf: 'center',
@@ -59,7 +59,7 @@ export default StyleSheet.create({
   label: {
     fontSize: height * 0.018,
     color: '#888',
-    marginLeft: width * 0.05,
+    marginLeft: width * 0.06,
     marginBottom: height * 0.008,
     textTransform: 'lowercase',
   },
@@ -71,8 +71,11 @@ export default StyleSheet.create({
     borderColor: '#ccc',
     borderRadius: 8,
     marginBottom: height * 0.023,
-    paddingHorizontal: width * 0.05,
+    paddingHorizontal: width * 0.04,
     alignSelf: 'center',
+    marginRight:5,
+    marginTop:2,
+      paddingTop: 10,
   },
 
   signinButton: {
@@ -82,7 +85,7 @@ export default StyleSheet.create({
     width: width * 0.79,
     marginBottom: height * 0.018,
     marginTop: height * 0.01,
-    alignSelf: 'center', 
+    alignSelf: 'center'
   },
 
   signinText: {
@@ -102,7 +105,8 @@ export default StyleSheet.create({
   flexDirection: 'row',
   alignItems: 'center',
   marginLeft:20,
-   width: '90%',
+   width: '91%',
+  //  marginTop:1
 
 },
 eyeIcon: {
@@ -110,13 +114,8 @@ eyeIcon: {
   height: 22,
   marginLeft:-30,
   tintColor: '#555',
-  marginBottom:20
-  
-  
-
+  marginBottom: 20 ,
 },
-
-
 
 
 });

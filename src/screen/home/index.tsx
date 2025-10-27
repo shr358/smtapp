@@ -1,58 +1,58 @@
 
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import { RouteProp, useNavigation, useRoute} from '@react-navigation/native';
-import { RootNavigationprop } from "../../navigation/stack";
-import { RootStackParamList } from '../../navigation/types';
-import styles from './styles'; 
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Image } from 'react-native';
+import Collect from '../collect/scanScreen';
+import Account from '../account/acount';
+import Catalog from '../catalog/Catalog';
+import Collection from '../collection/collection';
 
 
+const Tab = createBottomTabNavigator();
 
+const Home = ({ route }: any) => {
+  return (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        headerShown: false,
+        tabBarActiveTintColor: '#FFFFFF',
+        tabBarInactiveTintColor: 'gray',
+        tabBarStyle: { height: 60, paddingBottom: 5,backgroundColor:'black' },
+        tabBarIcon: ({ focused }) => {
+          let iconSource;
+          if (route.name === 'Collection') {
+            iconSource = require('../../assets/images/splash/collectionsIcon.png');
+          } else if (route.name === 'Catalog') {
+            iconSource = require('../../assets/images/splash/catalogIcon.png');
+          } else if (route.name === 'Collect') {
+            iconSource = require('../../assets/images/splash/collectIcon.png');
+          } else if (route.name === 'Account') {
+            iconSource = require('../../assets/images/splash/accountIcon.png');
+          }
 
-const Home = ()  =>{
-const navigation = useNavigation<RootNavigationprop>()
-const route = useRoute<RouteProp<RootStackParamList , 'home'>>()
-  const  {email} = route.params;
+          return (
+              <Image source={iconSource}
+              style={{
+                width: 24,
+  height: 24,
+   tintColor: focused ? '#FFFFFF' : 'gray',
+ }}
+ resizeMode="contain"
+ />
+);
+},
+      })}
+    >
+      <Tab.Screen
+        name="Collection"
+        component={Collection}
+         initialParams={route.params}
+      />
+      <Tab.Screen name="Catalog" component={Catalog} />
+      <Tab.Screen name="Collect" component={Collect} />
+      <Tab.Screen name="Account" component={Account} />
+    </Tab.Navigator>
+  );
+};
 
- 
-    return ( <View style={styles.container}>
-      <Text>Email:{email}</Text> 
-     <Text style={styles.title}>My Collection</Text> 
-  
-     <View style={styles.box}>
-
-   <Text style={styles.message}> 
-       you don't have any Collection yet,{'\n'}please{'\n'}scan or tap your Album 
-       </Text> 
-
-
-            
-             <TouchableOpacity style={styles.button} onPress={() => console.log('Scan or tap pressed')}>
-                <Text style={styles.buttonText}>scan or tap</Text> 
-                </TouchableOpacity> 
-
-
-   <View style = {styles.lineStyle}>
-
-</View>
-
-
-
-
-                <Text style={styles.orText}>or browse{'\n'}our catalog</Text> 
-            
-             <TouchableOpacity style={styles.button2} onPress={() => console.log('Browse catalog pressed')}> 
-                   
-                    <Text style={styles.buttonText2}>browse catalog</Text>
-
-                     </TouchableOpacity>
-            </View>
-
-     </View> 
-
-                      );
- };
-                    
- 
- export default Home;
-
+export default Home;
